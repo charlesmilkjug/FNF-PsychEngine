@@ -500,7 +500,7 @@ class LuaUtils
 			case 'camhud' | 'hud': return PlayState.instance.camHUD;
 			case 'camother' | 'other': return PlayState.instance.camOther;
 		}
-		var camera:Dynamic = PlayState.instance.variables.get(cam);
+		var camera:Dynamic = MusicBeatState.getVariables().get(cam);
 		if (camera == null || !Std.isOfType(camera, FlxCamera)) camera = PlayState.instance.camGame;
 		return camera;
 	}
